@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Duanyll's Blog
 author: Duanyll
 ---
@@ -11,7 +11,6 @@ author: Duanyll
 </head>
 
 <body>
-    <p>正在施工中，完工时间未定。。。</p>
     <p>斗地主游戏1.0发布了！<a href="https://github.com/Duanyll/DDZGame">点击查看</a></p>
     <p>下一个项目：<a href="https://github.com/Duanyll/PlaneGame">飞机游戏</a></p>
     <p>欢迎踩我这个菜鸡的<a href="https://github.com/Duanyll/Standard-TLE-Library">Standard-TLE-Library</a></p>
@@ -33,9 +32,19 @@ author: Duanyll
 └──╯╰──╯╰╯╰╯╰╯╰╯　╰╯　╰──╯╰──╯
 </code>
 </pre>
+    <h2>文章目录</h2>
+    <ul class="posts">
+
+		{% for post in site.posts %}
+
+		<li><span>{{ post.date | date_to_string }}</span> <span class="seperator">~</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
+
+		{% endfor %}
+
+	</ul>
     </p>
     <p>应某位大佬的要求
-        <img src="/LLFisDalao.PNG"></img>
+        <img src="/images/LLFisDalao.PNG"></img>
     </p>
     <p>你可以先去这位大佬的博客逛逛
         <a href="https://llf0703.com/">llf0703.com</a>
