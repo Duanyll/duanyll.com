@@ -17,4 +17,6 @@ author: Duanyll
 1. 代码封装一定要清晰，至少界面和逻辑要分开，移植也容易
 2. 多上网翻文档，最好参考[.NET API Browser](https://docs.microsoft.com/en-us/dotnet/api/)，方便发现更简单，更可维护的解决方案
 
+如果你对DDZGame有问题，发现了BUG，或者是有什么建议，请到[Issues](https://github.com/duanyll/DDZGame/issues)。
+
 欢迎关注我的下一个项目。
