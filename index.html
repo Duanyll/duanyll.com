@@ -1,18 +1,11 @@
+--- 
+layout: default 
+title: Duanyll's Blog 
+author: Duanyll 
 ---
-layout: default
-title: Duanyll's Blog
-author: Duanyll
----
-<!DOCTYPE html>
-<html>
 
-<head>
-    <title>{{ post.title }}</title>
-</head>
-
-<body>
-    <p>
-        <pre>
+<p>
+    <pre>
 <code>
 *建议使用Chrome或者Dev-CPP查看以下内容*
 ╭┬─　┐╮　　┌─　　┌──┐─┐┌────┐
@@ -33,11 +26,15 @@ author: Duanyll
     <h1>文章目录</h1>
     <ul class="posts">
 
-		{% for post in site.posts %}
+        {% for post in site.posts %}
 
-		<li><span>{{ post.date | date_to_string }}</span> <span class="seperator">~</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
+        <li>
+            <span>{{ post.date | date_to_string }}</span>
+            <span class="seperator">~</span>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
 
-		{% endfor %}
+        {% endfor %}
 
     </ul>
     <h2>友链</h2>
@@ -45,8 +42,12 @@ author: Duanyll
         <a href="/images/LLFisDalao.PNG">不挂图了，点击查看</a>
     </p>
     <p>
-        <li><a href="https://llf0703.com/">llf0703.com</a></li>
-        <li><a href="https://castersoft.com/">hxh大佬的游戏工作室</a></li>
+        <li>
+            <a href="https://llf0703.com/">llf0703.com</a>
+        </li>
+        <li>
+            <a href="https://castersoft.com/">hxh大佬的游戏工作室</a>
+        </li>
     </p>
     <p>如果你有问题，发现了BUG，或者是有什么建议，请到
         <a href="https://github.com/Duanyll/duanyll.github.io/issues">issues</a>
@@ -55,7 +56,3 @@ author: Duanyll
         <img src="https://s05.flagcounter.com/count2/6aqT/bg_151515/txt_FFFFFF/border_B5E853/columns_2/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/"
             alt="Flag Counter" border="0">
     </a>
-
-</body>
-
-</html>

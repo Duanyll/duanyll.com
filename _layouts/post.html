@@ -1,20 +1,62 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 
 <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=0b757949d4d6c5ecf4b5fb0c450349ea4e6b3831">
+
     <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+    <title>{{page.title}} | duanyll.github.io</title>
+    <meta name="generator" content="Jekyll v3.7.3.1" />
+    <meta property="og:title" content="Duanyll’s Blog" />
+    <meta name="author" content="Duanyll" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="duanyll’s blog" />
+    <meta property="og:description" content="duanyll’s blog" />
+    <link rel="canonical" href="https://duanyll.github.io/" />
+    <meta property="og:url" content="https://duanyll.github.io/" />
+    <meta property="og:site_name" content="duanyll.github.io" />
+    <script type="application/ld+json">
+{"@type":"WebSite","url":"https://duanyll.github.io/","name":"duanyll.github.io","headline":"Duanyll’s Blog","author":{"@type":"Person","name":"Duanyll"},"description":"duanyll’s blog","@context":"http://schema.org"}</script>
+    <!-- End Jekyll SEO tag -->
+
 </head>
 
 <body>
-    {{content}}
-    <div id="vcomments"></div>
-    <script>
-        new Valine({
-            el: '#vcomments',
-            appId: 'k0COfc1l54KLziDXDXXwX1cS-gzGzoHsz',
-            appKey: 'sgOHCHRvcqzrQCggo9X07bs0'
-        })
-    </script>
+
+    <header>
+        <div class="container">
+            <h1>duanyll.github.io</h1>
+            <h2>{{page.title}}</h2>
+
+            <section id="downloads">
+
+                <a href="https://github.com/Duanyll/duanyll.github.io" class="btn btn-github">
+                    <span class="icon"></span>View on GitHub</a>
+            </section>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="main_content">
+            {{content}}
+            <div id="vcomments"></div>
+            <script>
+                new Valine({
+                    el: '#vcomments',
+                    appId: 'k0COfc1l54KLziDXDXXwX1cS-gzGzoHsz',
+                    appKey: 'sgOHCHRvcqzrQCggo9X07bs0'
+                })
+            </script>
+        </section>
+    </div>
+
+
 </body>
 
 </html>
