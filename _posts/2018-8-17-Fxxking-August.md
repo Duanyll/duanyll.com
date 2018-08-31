@@ -1,11 +1,18 @@
 ---
 layout: post
-title: "TMD要军训了"
+title: "军训完了"
 tags: [废话,感想]
 comment: true
 published: true
-date: 2018-8-17
+date: 2018-8-31
 author: Duanyll
 ---
+军训就是
 
-内容军训完了在补吧。臭豆腐连锁搞什么鬼。
+> 一群煞笔瞎规矩多
+
+团队精神就是
+
+> 把属于一个人的事强加于一群人身上。
+
+以上就是我对军训的最终感言。
