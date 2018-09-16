@@ -15,7 +15,7 @@
     <meta name="generator" content="Jekyll v3.7.3.1" />
     <meta property="og:title" content="Duanyll’s Blog" />
     <meta name="author" content="Duanyll" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content="zh_CN" />
     <meta name="description" content="duanyll’s blog" />
     <meta property="og:description" content="duanyll’s blog" />
     <link rel="canonical" href="https://duanyll.github.io/" />
@@ -44,7 +44,12 @@
 
     <div class="container">
         <section id="main_content">
-            <h1>{{ post.title }}</h1>
+            <h1>{{ page.title }}</h1>
+            <h2>{{ page.date }}</h2>
+            <p>
+                Tags:
+                {{ page.tags }}
+            </p>
             {{content}}
             <div id="vcomments"></div>
             <script>

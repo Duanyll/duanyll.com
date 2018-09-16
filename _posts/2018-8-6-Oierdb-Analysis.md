@@ -10,4 +10,4 @@ author: Duanyll
 
 [Oierdb项目链接](https://github.com/fjzzq2002/fjzzq2002.github.io)
 
-具体内容稍后再补。
+~~具体内容稍后再补。~~ 现在不想补了。
