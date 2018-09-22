@@ -5,8 +5,6 @@ title: VSCode OI 使用配置
 author: Duanyll
 ---
 
-# VSCode OI 使用配置
-
 学校的电脑居然安装与运行VSCode不卡！（然而打开会卡两分钟）那我为什么还要用Dev-Cpp？下面贴出配置文件。建议安装C/C++扩展，使用Dev-Cpp的MinGW。
 
 ## `launch.json`
