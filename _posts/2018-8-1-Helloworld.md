@@ -13,4 +13,4 @@ author: Duanyll
 
 ![老页面](/images/OldBlog.PNG)
 
-如果你有问题，发现了BUG，或者是有什么建议，请到[Issues](https://github.com/duanyll/duanyll.com/issues)。
+如果你有问题，发现了BUG，或者是有什么建议，请到[Issues](https://github.com/duanyll/duanyll.github.io/issues)。

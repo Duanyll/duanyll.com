@@ -42,32 +42,28 @@ author: Duanyll
 
 ```json
 {
-
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Compile",
+            "label": "GCC Compile",
             "type": "shell",
             "command": "g++",
             "args": [
                 "${file}",
                 "-o",
-                "${file}.exe",
-                "-g"
+                "${fileBasename}.exe",
+                "-g",
+                "-Wall"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher":"$gcc"
-        },
-        {
-            "label": "Run",
-            "type": "shell",
-            "command": "./${file}.exe",
-            "group": {
-                "kind": "test",
-                "isDefault": true
+            "problemMatcher":"$gcc",
+            "options": {
+                "cwd": "${fileDirname}"
             }
         }
     ]
