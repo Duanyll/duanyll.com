@@ -7,6 +7,8 @@ tags: ["OI"]
 
 今天改以前的错题，发现了几个当初知道干嘛现在搞忘了的函数，能偷懒少写几行代码，再次做一个收集整理。
 
+<!-- more -->
+
 ## max_element/min_element/minmax_element
 
 找数组里面最大值或最小值，用法类似`sort`.

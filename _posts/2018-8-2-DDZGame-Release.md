@@ -8,7 +8,11 @@ date: 2018-8-2
 author: Duanyll
 ---
 
-大概六月中旬在我的GitHub首页上看到了LLF0703等大佬发起的[这个项目](https://github.com/JXFLS/Doudizhu)，甚是有趣，尽管截至今天这个项目下还是没有代码，但是让我有了自己做一个的兴趣，所以我就开工了。大概花了一个多星期就发布了。[发布网址](https://github.com/Duanyll/DDZGame)，[下载链接](https://github.com/Duanyll/DDZGame/releases/download/1.0.0.1/DDZGame.zip)，欢迎点击下载体验。
+大概六月中旬在我的GitHub首页上看到了LLF0703等大佬发起的[这个项目](https://github.com/JXFLS/Doudizhu)，甚是有趣，尽管截至今天这个项目下还是没有代码，但是让我有了自己做一个的兴趣，所以我就开工了。大概花了一个多星期就发布了。
+
+<!-- more -->
+
+[发布网址](https://github.com/Duanyll/DDZGame)，[下载链接](https://github.com/Duanyll/DDZGame/releases/download/1.0.0.1/DDZGame.zip)，欢迎点击下载体验。
 
 截图：懒得截了，Material Design风格，使用了[这个](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)界面库，网络通信组建参考了[这个](https://github.com/yinyoupoet/chatRoomTest)代码，使用方法见readme。
 

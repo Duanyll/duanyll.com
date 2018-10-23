@@ -7,6 +7,8 @@ tags: ["OI"]
 
 不多说,上代码
 
+<!-- more -->
+
 ```sh
 g++ Problem.cpp -o Problem.out
 g++ Problem_std.cpp -o Problem_std.out
