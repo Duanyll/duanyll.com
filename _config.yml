@@ -1,4 +1,4 @@
-theme: jekyll-theme-hacker
+theme: jekyll-theme-leap-day
 paginate: 5
 paginate_path: "page:num"
 excerpt_separator:  '<!-- more -->'
