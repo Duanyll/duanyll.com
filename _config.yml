@@ -1,4 +1,5 @@
 theme: jekyll-theme-leap-day
-paginate: 5
+paginate: 7
 paginate_path: "page:num"
 excerpt_separator:  '<!-- more -->'
+lang: zh-cn

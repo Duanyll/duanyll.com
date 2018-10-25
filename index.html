@@ -7,42 +7,32 @@ author: Duanyll
 <p>
     <pre>
 <code>
-
-      ::::    :::  :::::::: ::::::::::: :::::::::   ::::::::   :::::::    :::   :::::::: 
-     :+:+:   :+: :+:    :+:    :+:     :+:    :+: :+:    :+: :+:   :+: :+:+:  :+:    :+: 
-    :+:+:+  +:+ +:+    +:+    +:+     +:+    +:+       +:+  +:+   +:+   +:+  +:+    +:+  
-   +#+ +:+ +#+ +#+    +:+    +#+     +#++:++#+      +#+    +#+   +:+   +#+   +#++:++#    
-  +#+  +#+#+# +#+    +#+    +#+     +#+          +#+      +#+   +#+   +#+  +#+    +#+    
- #+#   #+#+# #+#    #+#    #+#     #+#         #+#       #+#   #+#   #+#  #+#    #+#     
-###    ####  ######## ########### ###        ##########  #######  ####### ########       
-                            
-                            ________________             
-                            ___  __ \__  __ \___________ 
-                            __  /_/ /_  /_/ /__/ /___/ /_
-                            _  _, _/_  ____//_  __/_  __/
-                            /_/ |_| /_/      /_/   /_/                                
+BigInt RP = 0,Pt = 0;
+while(true){
+	RP++;
+	Pt++;
+}
 </code>
 </pre>
 </p>
-    <h1>文章目录</h1>
     <ul class="posts">
 
         {% for post in paginator.posts %}
 
         <li>
-		<block>
-                <h3>{{ post.date | date_to_long_string }} | 
+		<article>
+                <p><b>{{ post.date | date_to_long_string }} | 
 				{{ post.author }} | 
 				{% for tag in post.tags %}
                 <q>{{ tag }}</q>
-                {% endfor %}</h3>
-                <h1>{{ post.title }}</h1>
+                {% endfor %}</b></p>
+                <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 				<p>
 					{{ post.excerpt | strip_html }}
 					<a href="{{ post.url }}">阅读更多...</a>
 				</p>				
 			<hr></hr>
-        </block>
+        </article>
         </li>
 
         {% endfor %}
