@@ -16,8 +16,8 @@ var newHeaderID = 1;
 
 $(function () {
     $("section h1, section h2, section h3").each(function () {
-        $("nav ul").append("<li class='tag-" + this.nodeName.toLowerCase() + "'><a href='#" + "headerno" + newHeaderID.toString + "'>" + $(this).text() + "</a></li>");
-        $(this).attr("id", "headerno" + newHeaderID.toString);
+        $("nav ul").append("<li class='tag-" + this.nodeName.toLowerCase() + "'><a href='#" + "headerno" + newHeaderID + "'>" + $(this).text() + "</a></li>");
+        $(this).attr("id", "headerno" + newHeaderID);
         newHeaderID++;
         $("nav ul li:first-child a").parent().addClass("active");
     });
