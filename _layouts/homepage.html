@@ -7,8 +7,7 @@
 
   {% seo %}
   <link rel="stylesheet" href="/assets/css/main.css">
-  <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.0.min.js"></script>
   <script src="/assets/js/main.js"></script>
   <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
@@ -24,13 +23,12 @@
   </header>
 
   <div id="banner">
-    <span id="logo"></span>
+    <a href="https://github.com/Duanyll/"><span id="logo"></span></a>
 
     <a href="{{ site.github.repository_url }}" class="button fork"><strong>View On GitHub</strong></a>
     <div class="downloads">
       <ul>
         <li><a href="/projects.html" class="button">我的项目</a></li>
-        <li><a href="https://github.com/duanyll" class="button">My Profile</a></li>
       </ul>
     </div>
   </div><!-- end banner -->
@@ -61,7 +59,7 @@
       (i[r].q = i[r].q || []).push(arguments)
     }, i[r].l = 1 * new Date(); a = s.createElement(o),
       m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
     ga('create', '{{ site.google_analytics }}', 'auto');
     ga('send', 'pageview');
   </script>
