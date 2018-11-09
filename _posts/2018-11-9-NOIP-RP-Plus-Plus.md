@@ -3,7 +3,10 @@ author: duanyll
 title: NOIP2018 RP++
 tags: ["OI"]
 date: 2018-11-9
+layout: post
 ---
+
+祝各位OIer NOIP2018 RP++！
 
 ```cpp
 BigInteger RP = 1 << INF;
@@ -76,3 +79,5 @@ MMGOMMOMM{   i@&&u  N&O/   '1&@Bu'   q&E  [BN8k   &&    ,_   /OqL'   "     &&B  
 E0EOOMOOO&&&MMOOO@&&M8Z8O@@&OOOB&&@&OGZM&&&&&&&&@by t123yh&&X^LjLM@&N&BB@&MO@?  /L{vi  [MOqEq0N0N0qN 
 */
 ```
+
+~~本来想示弱的，但听说考前示弱会真的变弱，就取消了~~
