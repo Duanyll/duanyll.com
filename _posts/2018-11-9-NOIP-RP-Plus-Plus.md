@@ -8,6 +8,8 @@ layout: post
 
 祝各位OIer NOIP2018 RP++！
 
+<!-- more -->
+
 ```cpp
 BigInteger RP = 1 << INF;
 while(true){
