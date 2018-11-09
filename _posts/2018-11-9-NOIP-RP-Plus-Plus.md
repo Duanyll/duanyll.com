@@ -12,13 +12,12 @@ layout: post
 
 ```cpp
 BigInteger RP = 1 << INF;
-while(true){
+while(true)
     RP++;
-}
 ```
 
 ```cpp
-/* 
+/*
 U{uJUjujuJjY[>vJjJjYv>[{jYuJuJJ<<[JJjY[<v[Y{ujJYu{vi>>v>vv[v[?[LjYJ{vi^>Y[<^>{JYJYj{JLJYuJJ{JYJ{YJu[ 
 J>[{v[v{?[><vUL<<?riYJ<^>[>v><<uj>r><^<uvi^?>v>v</>2j<r[LYLJ><r><?>^^qPviiuqUrr><>>v?[>v>[>[?v>??v>> 
 jLjJjYjYJL>/M&&/<iiN&&&vi<{L[i[&&Y/i/>&&&q^^[L{</u&&&&&GZZGqM&&u??i>&@&L>?&&@vJYujj[J{Y{Y{J{JYJLJLYv 
