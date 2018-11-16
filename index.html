@@ -28,7 +28,7 @@ while(true){
                 {% endfor %}</b></p>
                 <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 				<p>
-					{{ post.excerpt | strip_html }}
+					{{ post.excerpt | strip_html | truncate: 100}}
 					<a href="{{ post.url }}">阅读更多...</a>
 				</p>				
 			<hr></hr>
@@ -48,7 +48,7 @@ while(true){
 				{% elsif page == 1 %}
 					<a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
 				{% else %}
-					<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+					<a href="{{ '/page', page }}">{{ page }}</a>
 				{% endif %}			
 			{% endfor %}
 			{% if paginator.next_page %}
