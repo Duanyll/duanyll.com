@@ -5,18 +5,25 @@ permalink: /posts.json
 
 {
 	"posts":[
-		{% for post in site.posts %}
+	{%- for post in site.posts -%}
 		{
-			"title": "{{ post.title }}",
-			"date": "{{ post.date }}",
-			"excerpt": "{{ post.excerpt | strip_html | truncate: 100}}",
-			"url": "{{ post.url }}",
-			"tags":[
-				{% for tag in post.tags %}
-					"{{ tag }}",
-				{% endfor %}
-			]
-		},
-		{% endfor %}
+			"title" : "{{ post.title }}",
+			"date" : "{{ post.date | date_to_long_string }}",
+			"author" : "{{ post.author }}",
+			"tags" : [
+			{%- for tag in post.tags -%}
+				"{{ tag }}"
+				{%- if forloop.rindex != 1 -%}
+				,
+				{%- endif -%}
+			{%- endfor -%}
+			],
+			"url" : "{{ post.url }}",
+			"excerpt" : "{{ post.excerpt | strip_html | strip_newlines | lstrip | rstrip | truncate:100 }}"
+		}
+		{%- if forloop.rindex != 1 -%}
+		,
+		{%- endif -%}
+    {%- endfor -%}
 	]
 }
