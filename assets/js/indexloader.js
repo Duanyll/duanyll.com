@@ -11,7 +11,7 @@ request.responseType = 'text';
 request.send();
  
 var posts; 
-let section = document.getElementById('posts');
+let section = null;
 
     //处理来自服务器的数据
 request.onload = function() {
@@ -22,6 +22,7 @@ request.onload = function() {
 };
 
 function showPosts(list) {
+	section = document.getElementById('posts');
 	section.innerHTML = "";
 	for(let i = 0;i<list.length;i++){
 		showPost(list[i]);
