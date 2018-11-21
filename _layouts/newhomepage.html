@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  {% seo %}
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="https://code.jquery.com/jquery-3.3.0.min.js"></script>
+  <script src="/assets/js/indexloader.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Duanyll's Blog</h1>
+  </header>
+
+  <div id="banner">
+    <a href="https://github.com/Duanyll/"><span id="logo"></span></a>
+
+    <a href="{{ site.github.repository_url }}" class="button fork"><strong>View On GitHub</strong></a>
+    <div class="downloads">
+      <ul>
+        <li><a href="/projects.html" class="button">我的项目</a></li>
+      </ul>
+    </div>
+  </div><!-- end banner -->
+
+  <div class="wrapper">
+    <nav>
+      <ul></ul>
+    </nav>
+    <section>
+      {{ content }}
+
+    </section>
+    <footer>
+      <p>
+        <a href="https://github.com/Duanyll/duanyll.github.io/blob/master/LICENSE"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"></img></a>
+      </p>
+      {% if site.github.is_project_page %}
+      <p>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+      {% endif %}
+      <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+    </footer>
+  </div>
+
+  {% if site.google_analytics %}
+  <script>
+    (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', '{{ site.google_analytics }}', 'auto');
+    ga('send', 'pageview');
+  </script>
+  {% endif %}
+</body>
+
+</html>
