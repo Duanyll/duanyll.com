@@ -18,15 +18,24 @@ request.onload = function() {
     let postsText = request.response;
     posts = JSON.parse(postsText);
     //console.log(postsText);
-	showPosts(posts['posts']);
+	initPosts(posts['posts']);
 };
+
+function initPosts(list){
+	clearSection();
+	showPosts(list);
+}
 
 function showPosts(list) {
 	section = document.getElementById('posts');
-	section.innerHTML = "";
 	for(let i = 0;i<list.length;i++){
 		showPost(list[i]);
 	}
+}
+
+function clearSection(){
+	section = document.getElementById('posts');
+	section.innerHTML = "";
 }
 
 function showPost(post){
@@ -51,6 +60,8 @@ function showPost(post){
 	article.appendChild(para);
 	
 	li.appendChild(article);
+	li.appendChild(document.createElement('hr'));
+	
 	section.appendChild(li);
 }
 	
