@@ -18,7 +18,7 @@
 
 	"Post Header":{
 		"scope": "markdown,html",
-		"prefix": "---head",
+		"prefix": "posthead",
 		"body": [
 			"---",
 			"author: Duanyll",
