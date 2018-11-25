@@ -76,7 +76,7 @@ function showPost(post) {
 
 	section.appendChild(li);
 
-	$(window).resize(sectionHeight);
+	sectionHeight();
 }
 
 $(window).scroll(function () {

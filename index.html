@@ -38,23 +38,12 @@ while(true){
         {% endfor %}
 		
 		{% if paginator.total_pages > 1 %}
-			<center><p>
 			{% if paginator.previous_page %}
-				<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
+			<div align="left"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a></div>
 			{% endif %}
-			{% for page in (1..paginator.total_pages) %}
-				{% if page == paginator.page %}
-					<span class="active">{{ page }}</span>
-				{% elsif page == 1 %}
-					<a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-				{% else %}
-					<a href="{{ '/page', page }}">{{ page }}</a>
-				{% endif %}			
-			{% endfor %}
 			{% if paginator.next_page %}
-				<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
+			<div align="right"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a></div>
 			{% endif %}
-			</p></center>
 		{% endif %}
 
 	</ul>
