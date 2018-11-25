@@ -23,17 +23,69 @@ request.onload = function () {
 
 var nextToShow = 0;
 var postList;
+var postToShow;
 
 function initPosts(list) {
-	clearSection();
 	postList = list;
+	document.getElementById('nav-ul').innerHTML = "";
+	initTags(list);
+	showAllPost();
+}
+
+function showAllPost() {
+	clearSection();
+	postToShow = postList;
+	showPosts(postList.slice(0, Math.min(10, postList.length)));
+	nextToShow = Math.min(10, postList.length);
+}
+
+function initTags(list) {
+	var header = document.createElement('li');
+	header.setAttribute('class', 'tag-h1');
+	header.innerHTML = "分类";
+	header.onclick = showAllPost;
+
+	let nav = document.getElementById('nav-ul');
+	nav.appendChild(header);
+
+	var allTags = new Set([]);
+	for (let i = 0; i < list.length; i++) {
+		for (let j = 0; j < list[i].tags.length; j++){
+			if (!allTags.has(list[i].tags[j])) {
+				allTags.add(list[i].tags[j]);
+			}
+		}
+	}
+
+	allTags.forEach(tag => {
+		let label = document.createElement('li');
+		label.innerHTML = tag;
+		label.setAttribute('class', 'tag-h2');
+		label.setAttribute('href', '#');
+		label.onclick = function () {
+			var list = [];
+			var tag = this.innerHTML;
+			postList.forEach(post => {
+				if (post.tags.indexOf(tag) > -1) {
+					list.push(post);
+				}
+			});
+			showSelectedPost(list);
+		}
+		nav.appendChild(label);
+	});
+}
+
+function showSelectedPost(list) {
+	clearSection();
+	postToShow = list;
 	showPosts(list.slice(0, Math.min(10, list.length)));
 	nextToShow = Math.min(10, list.length);
 }
 
 function addListMore() {
-	if (nextToShow < postList.length) {
-		showPost(postList[nextToShow]);
+	if (nextToShow < postToShow.length) {
+		showPost(postToShow[nextToShow]);
 		nextToShow++;
 	}
 }

@@ -1,3 +1,6 @@
 {
-    "files.autoSave": "off"
+    "files.autoSave": "off",
+    "files.associations": {
+        "*.html": "liquid"
+    },
 }
