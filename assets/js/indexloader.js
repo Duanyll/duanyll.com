@@ -28,6 +28,7 @@ var postToShow;
 function initPosts(list) {
 	postList = list;
 	document.getElementById('nav-ul').innerHTML = "";
+	initSearchBox();
 	initTags(list);
 	initDate(list);
 	showAllPost();
@@ -38,6 +39,29 @@ function showAllPost() {
 	postToShow = postList;
 	showPosts(postList.slice(0, Math.min(10, postList.length)));
 	nextToShow = Math.min(10, postList.length);
+}
+
+function initSearchBox() {
+	var box = document.createElement('input');
+	box.setAttribute('type', 'text');
+	box.setAttribute('id', 'search-box');
+	box.setAttribute('placeholder', '搜索文章...');
+	box.oninput = function () {
+		var text = this.value;
+		if (text != "") {
+			var list = [];
+			postList.forEach(post => {
+				if (post.title.search(text) > -1 || post.excerpt.search(text) > -1) {
+					list.push(post);
+				}
+			});
+			showSelectedPost(list);
+		} else {
+			showAllPost();
+		}
+	}
+
+	document.getElementById('nav-ul').appendChild(box);
 }
 
 function initTags(list) {
