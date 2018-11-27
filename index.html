@@ -1,5 +1,5 @@
 --- 
-layout: homepage 
+layout: newhomepage 
 title: Duanyll's Blog 
 author: Duanyll 
 ---
@@ -15,41 +15,14 @@ while(true){
 </code>
 </pre>
 </p>
-	<p>
-		<a href="/demoindex.html">尝试新版首页</a>
-	</p>
-    <ul class="posts">
-
-        {% for post in paginator.posts %}
-
-        <li>
-		<article>
-                <p><b>{{ post.date | date_to_long_string }} | 
-				{{ post.author }} | 
-				{% for tag in post.tags %}
-                <q>{{ tag }}</q>
-                {% endfor %}</b></p>
-                <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-				<p>
-					{{ post.excerpt | strip_html | truncate: 100}}
-					<a href="{{ post.url }}">阅读更多...</a>
-				</p>				
-			<hr></hr>
-        </article>
-        </li>
-
-        {% endfor %}
-		
-		{% if paginator.total_pages > 1 %}
-			{% if paginator.previous_page %}
-			<div align="left"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a></div>
-			{% endif %}
-			{% if paginator.next_page %}
-			<div align="right"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a></div>
-			{% endif %}
-		{% endif %}
-
-	</ul>
+    <ul id="posts">
+        <p>
+            正在获取文章列表...
+        </p>
+        <a href="/archives.html">
+            无法获取?访问归档页
+        </a>
+    </ul>
     <center>
 		<a href="https://info.flagcounter.com/6aqT">
 			<img src="https://s05.flagcounter.com/count2/6aqT/bg_FFFFFF/txt_00000/border_000000/columns_3/maxflags_10/viewers_1/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0">

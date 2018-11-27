@@ -1,4 +1,2 @@
-paginate: 7
-paginate_path: "page:num"
 excerpt_separator:  '<!-- more -->'
 lang: zh-cn
