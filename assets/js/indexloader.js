@@ -29,6 +29,7 @@ function initPosts(list) {
 	postList = list;
 	document.getElementById('nav-ul').innerHTML = "";
 	initTags(list);
+	initDate(list);
 	showAllPost();
 }
 
@@ -42,7 +43,7 @@ function showAllPost() {
 function initTags(list) {
 	var header = document.createElement('li');
 	header.setAttribute('class', 'tag-h1');
-	header.innerHTML = "分类";
+	header.innerHTML = "<a href='#'>所有分类</a>";
 	header.onclick = showAllPost;
 
 	let nav = document.getElementById('nav-ul');
@@ -59,14 +60,52 @@ function initTags(list) {
 
 	allTags.forEach(tag => {
 		let label = document.createElement('li');
-		label.innerHTML = tag;
+		label.innerHTML = '<a href="#">' + tag + '</a>';
 		label.setAttribute('class', 'tag-h2');
-		label.setAttribute('href', '#');
 		label.onclick = function () {
 			var list = [];
-			var tag = this.innerHTML;
+			var tag = this.innerText;
 			postList.forEach(post => {
 				if (post.tags.indexOf(tag) > -1) {
+					list.push(post);
+				}
+			});
+			showSelectedPost(list);
+		}
+		nav.appendChild(label);
+	});
+}
+
+function extractDate(str){
+	var vs = str.split(' ');
+	return vs[1] + ' ' + vs[2];
+}
+
+function initDate(list){
+	var header = document.createElement('li');
+	header.setAttribute('class', 'tag-h1');
+	header.innerHTML = "<a href='#'>所有发布时间</a>";
+	header.onclick = showAllPost;
+
+	let nav = document.getElementById('nav-ul');
+	nav.appendChild(header);
+
+	var allTags = new Set([]);
+	for (let i = 0; i < list.length; i++) {
+		if(!allTags.has(extractDate(list[i].date))){
+			allTags.add(extractDate(list[i].date));
+		}
+	}
+
+	allTags.forEach(tag => {
+		let label = document.createElement('li');
+		label.innerHTML = '<a href="#">' + tag + '</a>';
+		label.setAttribute('class', 'tag-h2');
+		label.onclick = function () {
+			var list = [];
+			var tag = this.innerText;
+			postList.forEach(post => {
+				if (extractDate(post.date) == tag) {
 					list.push(post);
 				}
 			});
