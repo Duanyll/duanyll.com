@@ -41,17 +41,42 @@ function showAllPost() {
 	nextToShow = Math.min(10, postList.length);
 }
 
+function coverString(subStr, str) {
+	var reg = eval("/" + subStr + "/ig");
+	return reg.test(str);
+}
+
+function containsKeyWord(post, str) {
+	if (coverString(str, post.title)) {
+		return true;
+	} else {
+		if (coverString(str, post.excerpt)) {
+			return true;
+		} else {
+			var found = false;
+			post.tags.forEach(tag => {
+				if (coverString(str, tag)) {
+					found = true;
+					return;
+				}
+			});
+			return found;
+		}
+	}
+}
+
 function initSearchBox() {
 	var box = document.createElement('input');
 	box.setAttribute('type', 'text');
 	box.setAttribute('id', 'search-box');
-	box.setAttribute('placeholder', '搜索文章...');
+	box.setAttribute('class', 'sbox');
+	box.setAttribute('placeholder', '搜索文章标题/摘要/标签...');
 	box.oninput = function () {
 		var text = this.value;
 		if (text != "") {
 			var list = [];
 			postList.forEach(post => {
-				if (post.title.search(text) > -1 || post.excerpt.search(text) > -1) {
+				if (containsKeyWord(post, text)) {
 					list.push(post);
 				}
 			});
