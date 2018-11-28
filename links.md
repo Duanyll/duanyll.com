@@ -22,4 +22,8 @@ cyc大佬的博客.
 
 一个毫无Bug,绝对与Galaxy OJ毫无关系的OJ.
 
+## [LinkToLune](https://linktolune.github.io/)
+
+cyl大佬的博客.
+
 欢迎交换友链,请到[Issues](https://github.com/duanyll/duanyll.github.io/issues).
