@@ -6,6 +6,8 @@ author: Duanyll
 
 只有一行代码的自动AC机（直接`#include`std）
 
+<!-- more -->
+
 ```cpp
 #include "../../source/std/题目名字.cpp"
 ```
