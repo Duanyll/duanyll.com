@@ -19,7 +19,7 @@ permalink: /posts.json
 			{%- endfor -%}
 			],
 			"url" : "{{ post.url }}",
-			"excerpt" : "{{ post.excerpt | strip_html | strip_newlines | lstrip | rstrip | truncate:100 }}"
+			"excerpt" : "{{ post.excerpt | strip_html | strip_newlines | lstrip | rstrip | truncate:100 | escape_once }}"
 		}
 		{%- if forloop.rindex != 1 -%}
 		,
