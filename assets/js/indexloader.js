@@ -70,7 +70,7 @@ function initSearchBox() {
 	box.setAttribute('type', 'text');
 	box.setAttribute('id', 'search-box');
 	box.setAttribute('class', 'sbox');
-	box.setAttribute('placeholder', '搜索文章标题/摘要/标签...');
+	box.setAttribute('placeholder', '搜索...');
 	box.oninput = function () {
 		var text = this.value;
 		if (text != "") {
@@ -89,31 +89,75 @@ function initSearchBox() {
 	document.getElementById('nav-ul').appendChild(box);
 }
 
+var tagsCount;
+var tagCloudView;
+
+function tagForSort(name, count) {
+	this.name = name;
+	this.count = count;
+	return this;
+}
+
+//可以对对象中的任何属性进行排序
+function sortByProperty(property) {
+	function sortfun(obj1, obj2) {
+		//核心代码
+		if (obj1[property] > obj2[property]) return -1
+		else if (obj1[property] < obj2[property]) return 1
+		else if (obj1[property] == obj2[property]) return 0
+	}
+	return sortfun
+}
+
+function shuffle(a) {
+	var len = a.length;
+	for (var i = 0; i < len; i++) {
+		var end = len - 1;
+		var index = (Math.random() * (end + 1)) >> 0;
+		var t = a[end];
+		a[end] = a[index];
+		a[index] = t;
+	}
+	return a;
+};
+
 function initTags(list) {
 	var header = document.createElement('li');
 	header.setAttribute('class', 'tag-h1');
-	header.innerHTML = "<a href='#'>所有分类</a>";
+	header.innerHTML = "<a href='#'>所有标签</a>";
 	header.onclick = showAllPost;
 
 	let nav = document.getElementById('nav-ul');
 	nav.appendChild(header);
 
-	var allTags = new Set([]);
-	for (let i = 0; i < list.length; i++) {
-		for (let j = 0; j < list[i].tags.length; j++){
-			if (!allTags.has(list[i].tags[j])) {
-				allTags.add(list[i].tags[j]);
+	tagsCount = new Map();
+	list.forEach(post => {
+		post.tags.forEach(tag => {
+			if (!tagsCount.has(tag)) {
+				tagsCount.set(tag, 1);
+			} else {
+				tagsCount.set(tag, tagsCount.get(tag) + 1);
 			}
-		}
-	}
+		});
+	});
 
-	allTags.forEach(tag => {
+	let sortTemp = [];
+
+	for (var [tag, count] of tagsCount) {
+		sortTemp.push(new tagForSort(tag, count));
+	};
+
+	sortTemp.sort(sortByProperty("count"));
+
+	for (let i = 0; i < 5; i++){
+		let tag = sortTemp[i].name;
+		let count = sortTemp[i].count;
 		let label = document.createElement('li');
-		label.innerHTML = '<a href="#">' + tag + '</a>';
+		label.innerHTML = '<a href="#">' + tag + '(' + count + ')' + '</a>';
 		label.setAttribute('class', 'tag-h2');
 		label.onclick = function () {
 			var list = [];
-			var tag = this.innerText;
+			var tag = this.innerText.split('(')[0];
 			postList.forEach(post => {
 				if (post.tags.indexOf(tag) > -1) {
 					list.push(post);
@@ -122,7 +166,39 @@ function initTags(list) {
 			showSelectedPost(list);
 		}
 		nav.appendChild(label);
-	});
+	}
+
+	tagCloudView = document.createElement('p');
+	let maxCount = sortTemp[0].count;
+	sortTemp = shuffle(sortTemp);
+	for (let i = 0; i < sortTemp.length; i++) {
+		let tag = sortTemp[i].name;
+		let count = sortTemp[i].count;
+		let label = document.createElement('span');
+		label.innerHTML = '<a href="#">' + tag + '(' + count + ')' + '</a>';
+		let fontSize = 18 + count / maxCount * 36;
+		label.setAttribute("style", 'font-size:' + Math.round(fontSize) + 'px;margin:20px;');
+		label.onclick = function () {
+			var list = [];
+			var tag = this.innerText.split('(')[0];
+			postList.forEach(post => {
+				if (post.tags.indexOf(tag) > -1) {
+					list.push(post);
+				}
+			});
+			showSelectedPost(list);
+		}
+		tagCloudView.appendChild(label);
+	}
+
+	let btnShowTagCloud = document.createElement('li');
+	btnShowTagCloud.setAttribute('class', 'tag-h2');
+	btnShowTagCloud.innerHTML = "<a href='#'>标签云</a>";
+	btnShowTagCloud.onclick = function () {
+		clearSection();
+		section.appendChild(tagCloudView);
+	}
+	nav.appendChild(btnShowTagCloud);
 }
 
 function extractDate(str){
@@ -186,6 +262,7 @@ function showPosts(list) {
 }
 
 function clearSection() {
+	postToShow = [];
 	section = document.getElementById('posts');
 	section.innerHTML = "";
 }
