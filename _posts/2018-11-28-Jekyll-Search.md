@@ -12,7 +12,7 @@ tags: ["教程","Jekyll"]
 
 {% raw %}
 
-```json
+```liquid
 ---
 layout: null
 permalink: /posts.json

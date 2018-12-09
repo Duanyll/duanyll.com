@@ -14,7 +14,7 @@ tags: ["项目","Dotnet","施工现场"]
 
 目前已支持抓取HDU与BZOJ的AC记录,POJ这段时间都无法访问,暂不添加.
 
-[项目Github仓库](https://github.com/duanyll/OJStatusCrwler),可执行文件不太可能发布,请各位大佬自行build(期待dotnet core 3 单文件打包)
+[项目Github仓库](https://github.com/duanyll/OJStatusCrawler),可执行文件不太可能发布,请各位大佬自行build(期待dotnet core 3 单文件打包)
 
 ## 使用方法
 
