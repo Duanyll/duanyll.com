@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [OI]
+tags: [OI,vscode]
 title: VSCode OI 使用配置
 author: Duanyll
 ---

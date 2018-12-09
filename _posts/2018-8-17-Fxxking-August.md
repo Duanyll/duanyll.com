@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "军训完了"
-tags: [废话,感想]
+tags: [废话,感想,总结]
 comment: true
 published: true
 date: 2018-8-31

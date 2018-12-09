@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [OI]
+tags: [OI,废话]
 title: 实地测试各种读取方法的速度
 author: Duanyll
 ---

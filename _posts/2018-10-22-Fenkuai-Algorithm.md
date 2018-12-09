@@ -1,7 +1,7 @@
 ---
 date: 2018-10-22
 author: Duanyll
-tags: ["OI"]
+tags: ["OI","算法","分块"]
 title: 初步认识分块算法
 ---
 

@@ -2,7 +2,7 @@
 author: duanyll
 date: 2018-10-19
 title: Linux下对拍sh
-tags: ["OI"]
+tags: ["OI","linux","vscode"]
 ---
 
 不多说,上代码

@@ -1,7 +1,7 @@
 ---
 author: duanyll
 title: 为你的Jekyll博客添加搜索文章功能
-tags: ["教程"]
+tags: ["教程","Jekyll"]
 ---
 
 众所周知，Github上的Jekyll上实现自定义插件很困难，因此即使有Jekyll的搜索插件，也只能手写js代码。静态网站实现搜索原理是这样的，通过HTTP请求获取`posts.json`，然后本地解析里面内容实现搜索。

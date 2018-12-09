@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [OI]
+tags: ["OI","总结"]
 title: GDB常用命令
 author: Duanyll
 ---

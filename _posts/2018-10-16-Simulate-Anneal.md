@@ -2,7 +2,7 @@
 author: duanyll
 date: 2018-10-16
 title: 玄(pian)学(fen)算法——模拟退火
-tags: ["OI"]
+tags: ["OI","算法","模拟退火"]
 ---
 
 NOIP在即，还是复习一下经典玄(pian)学(fen)算法，多骗个二三十分，以免爆零。

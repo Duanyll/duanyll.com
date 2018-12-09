@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "少说空话，多干实事"
-tags: [废话]
+tags: [废话,总结]
 comment: true
 published: true
 date: 2018-9-1

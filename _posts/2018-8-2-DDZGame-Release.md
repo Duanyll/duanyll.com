@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DDZGame正式版发布"
-tags: [项目]
+tags: [项目,DDZGame]
 comment: true
 published: true
 date: 2018-8-2

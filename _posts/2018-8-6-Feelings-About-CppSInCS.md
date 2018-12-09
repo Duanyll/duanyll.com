@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "一次对.Net Framework的失败的挑战"
-tags: [废话,感想,项目]
+tags: [废话,感想,项目,dotnet,咕咕咕]
 comment: true
 published: true
 date: 2018-8-31
