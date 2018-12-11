@@ -1,3 +1,5 @@
+//This file is licensed under the MIT license.
+
 //保存一个json文件访问的URL作为一个变量
 let requestURL = '/posts.json';
 //创建一个HTTP请求对象
@@ -177,7 +179,7 @@ function initTags(list) {
 		let label = document.createElement('span');
 		label.innerHTML = '<a href="#">' + tag + '(' + count + ')' + '</a>';
 		let fontSize = 18 + count / maxCount * 36;
-		label.setAttribute("style", 'font-size:' + Math.round(fontSize) + 'px;margin:20px;');
+		label.setAttribute("style", 'font-size:' + Math.round(fontSize) + 'px;margin:10px;display:inline-block;');
 		label.onclick = function () {
 			var list = [];
 			var tag = this.innerText.split('(')[0];
