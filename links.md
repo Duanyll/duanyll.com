@@ -10,6 +10,9 @@ layout: default
 
 llf大佬的博客.
 
+- [llf大佬的早期博客](2018.llf0703.com)
+- [llf大佬的项目](pro.llf0703.com)
+
 ## [CasterSoft](http://castersoft.com)
 
 一个有梦想,有信仰的学生游戏工作室.
@@ -25,5 +28,9 @@ cyc大佬的博客.
 ## [LinkToLune](https://linktolune.github.io/)
 
 cyl大佬的博客.
+
+## [Harrybh](https://harrybh.github.io/)
+
+harrybh大佬的博客.
 
 欢迎交换友链,请到[Issues](https://github.com/duanyll/duanyll.github.io/issues).
