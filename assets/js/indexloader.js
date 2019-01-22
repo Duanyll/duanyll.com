@@ -126,7 +126,7 @@ function shuffle(a) {
 function initTags(list) {
 	var header = document.createElement('li');
 	header.setAttribute('class', 'tag-h1');
-	header.innerHTML = "<a href='#'>所有标签</a>";
+	header.innerHTML = "<a href='#'>所有文章</a>";
 	header.onclick = showAllPost;
 
 	let nav = document.getElementById('nav-ul');
@@ -209,13 +209,7 @@ function extractDate(str){
 }
 
 function initDate(list){
-	var header = document.createElement('li');
-	header.setAttribute('class', 'tag-h1');
-	header.innerHTML = "<a href='#'>所有发布时间</a>";
-	header.onclick = showAllPost;
-
-	let nav = document.getElementById('nav-ul');
-	nav.appendChild(header);
+	let nav = document.createElement('ul');
 
 	var allTags = new Set([]);
 	for (let i = 0; i < list.length; i++) {
@@ -226,11 +220,10 @@ function initDate(list){
 
 	allTags.forEach(tag => {
 		let label = document.createElement('li');
-		label.innerHTML = '<a href="#">' + tag + '</a>';
-		label.setAttribute('class', 'tag-h2');
+		label.innerHTML = '<h3><a href="#">' + tag + '</a></h3>';
 		label.onclick = function () {
 			var list = [];
-			var tag = this.innerText;
+			var tag = this.innerText.trim();
 			postList.forEach(post => {
 				if (extractDate(post.date) == tag) {
 					list.push(post);
@@ -240,6 +233,15 @@ function initDate(list){
 		}
 		nav.appendChild(label);
 	});
+
+	var header = document.createElement('li');
+	header.setAttribute('class', 'tag-h1');
+	header.innerHTML = "<a href='#'>发布时间</a>";
+	header.onclick = function(){
+		clearSection();
+		section.appendChild(nav);
+	}
+	document.getElementById('nav-ul').appendChild(header);
 }
 
 function showSelectedPost(list) {
