@@ -10,8 +10,8 @@ layout: default
 
 llf大佬的博客.
 
-- [llf大佬的早期博客](2018.llf0703.com)
-- [llf大佬的项目](pro.llf0703.com)
+- [llf大佬的早期博客](https://2018.llf0703.com)
+- [llf大佬的项目](https://pro.llf0703.com)
 
 ## [CasterSoft](http://castersoft.com)
 
@@ -27,7 +27,7 @@ cyc大佬的博客.
 
 ## [LinkToLune](https://linktolune.github.io/)
 
-cyl大佬的博客.
+cyl大佬的博客(目前咕了).
 
 ## [Harrybh](https://harrybh.github.io/)
 
