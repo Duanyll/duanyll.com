@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Jekyll serve",
+            "command": "bundle",
+            "args": [
+                "exec",
+                "jekyll",
+                "serve"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "isBackground": true
+        }
+    ]
+}
