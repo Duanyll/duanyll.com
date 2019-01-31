@@ -475,7 +475,9 @@ pre {
     border-radius: 3px;
     border: 1px solid #e4cccc;
     overflow: auto;
-    overflow-y: hidden
+    overflow-y: hidden;
+    white-space: pre-wrap;
+    word-break: break-all;
 }
 
 pre code {
