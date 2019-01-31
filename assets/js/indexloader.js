@@ -151,7 +151,7 @@ function initTags(list) {
 
 	sortTemp.sort(sortByProperty("count"));
 
-	for (let i = 0; i < 5; i++){
+	for (let i = 0; i < 5; i++) {
 		let tag = sortTemp[i].name;
 		let count = sortTemp[i].count;
 		let label = document.createElement('li');
@@ -203,17 +203,17 @@ function initTags(list) {
 	nav.appendChild(btnShowTagCloud);
 }
 
-function extractDate(str){
+function extractDate(str) {
 	var vs = str.split(' ');
 	return vs[1] + ' ' + vs[2];
 }
 
-function initDate(list){
+function initDate(list) {
 	let nav = document.createElement('ul');
 
 	var allTags = new Set([]);
 	for (let i = 0; i < list.length; i++) {
-		if(!allTags.has(extractDate(list[i].date))){
+		if (!allTags.has(extractDate(list[i].date))) {
 			allTags.add(extractDate(list[i].date));
 		}
 	}
@@ -237,7 +237,7 @@ function initDate(list){
 	var header = document.createElement('li');
 	header.setAttribute('class', 'tag-h1');
 	header.innerHTML = "<a href='#'>发布时间</a>";
-	header.onclick = function(){
+	header.onclick = function () {
 		clearSection();
 		section.appendChild(nav);
 	}

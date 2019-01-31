@@ -422,6 +422,10 @@ a {
     text-decoration: none
 }
 
+header > p > a{
+    color: #c0c0c0;
+}
+
 a small {
     font-size: 11px;
     color: #666;
@@ -456,21 +460,20 @@ blockquote {
 }
 
 code {
-    font-family: 'Lucida Sans', Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
     font-size: 13px;
-    color: #efefef;
-    text-shadow: 0px 1px 0px #000;
+    color: #666;
+    text-shadow: 0px 1px 0px #555;
     margin: 0 4px;
     padding: 2px 6px;
-    background: #333;
+    background: #efefef;
     border-radius: 2px
 }
 
 pre {
     padding: 8px 15px;
-    background: #333333;
+    background: #efefef;
     border-radius: 3px;
-    border: 1px solid #c7c7c7;
+    border: 1px solid #e4cccc;
     overflow: auto;
     overflow-y: hidden
 }
