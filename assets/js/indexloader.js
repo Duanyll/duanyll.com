@@ -68,12 +68,12 @@ function containsKeyWord(post, str) {
 }
 
 function initSearchBox() {
-	var box = document.createElement('input');
-	box.setAttribute('type', 'text');
-	box.setAttribute('id', 'search-box');
-	box.setAttribute('class', 'sbox');
-	box.setAttribute('placeholder', '搜索...');
-	box.oninput = function () {
+	// var box = document.createElement('input');
+	// box.setAttribute('type', 'text');
+	// box.setAttribute('id', 'search-box');
+	// box.setAttribute('class', 'sbox');
+	// box.setAttribute('placeholder', '搜索...');
+	document.getElementById('search-box').oninput = function () {
 		var text = this.value;
 		if (text != "") {
 			var list = [];
@@ -87,8 +87,6 @@ function initSearchBox() {
 			showAllPost();
 		}
 	}
-
-	document.getElementById('nav-ul').appendChild(box);
 }
 
 var tagsCount;
@@ -251,10 +249,19 @@ function showSelectedPost(list) {
 	nextToShow = Math.min(10, list.length);
 }
 
+var noMorePostShown = false;
 function addListMore() {
 	if (nextToShow < postToShow.length) {
 		showPost(postToShow[nextToShow]);
 		nextToShow++;
+	} else {
+		if (!noMorePostShown) {
+			var notice = document.createElement('p');
+			notice.innerHTML = "没有更多了";
+			notice.setAttribute('style', 'text-align:center;');
+			document.getElementById('posts').appendChild(notice);
+			noMorePostShown = true;
+		}
 	}
 }
 
@@ -269,6 +276,7 @@ function clearSection() {
 	postToShow = [];
 	section = document.getElementById('posts');
 	section.innerHTML = "";
+	noMorePostShown = false;
 }
 
 function showPost(post) {
