@@ -270,14 +270,12 @@ table {
     font-style: normal
 }
 
-
 body {
     font: 14px/22px 'Quattrocento Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #666;
     font-weight: 300;
     margin: 0px;
     padding: 0px 0 20px 0px;
-    background: url(../images/body-background.png) #eae6d1
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -317,7 +315,7 @@ a {
     text-decoration: none
 }
 
-header a{
+header a {
     color: #c0c0c0;
 }
 
@@ -463,7 +461,7 @@ header p {
     padding-right: 10px
 }
 
-#banner .button {
+#banner .button, .sbox {
     border: 1px solid #dba500;
     background: linear_gradient(#ffe788, #ffce38);
     border-radius: 2px;
@@ -480,7 +478,7 @@ header p {
     text-align: center
 }
 
-#banner .button:hover {
+#banner .button:hover, .sbox:hover {
     background: linear_gradient(#ffe788, #ffe788);
     background-color: #ffeca0
 }
@@ -542,10 +540,6 @@ section {
     margin: 20px 0;
     margin-top: 190px;
     position: relative;
-    background: #fbfbfb;
-    border-radius: 3px;
-    border: 1px solid #cbcbcb;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.09), inset 0px 0px 2px 2px rgba(255, 255, 255, 0.5), inset 0 0 5px 5px rgba(255, 255, 255, 0.4)
 }
 
 small {
@@ -745,7 +739,7 @@ footer {
     }
 }
 
-input{
+/* input{
     border: 1px solid #ccc;
     padding: 7px 0px;
     border-radius: 3px;
@@ -762,4 +756,4 @@ input:focus{
         outline: 0;
         -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
         box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
-}
+} */
