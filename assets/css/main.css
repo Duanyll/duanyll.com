@@ -540,6 +540,10 @@ section {
     margin: 20px 0;
     margin-top: 190px;
     position: relative;
+    background: #fbfbfb;
+    border-radius: 3px;
+    border: 1px solid #cbcbcb;
+    box-shadow: -5px 1px 15px rgba(0, 0, 0, 0.09), inset 0px 0px 2px 2px rgba(255, 255, 255, 0.5), inset 0 0 5px 5px rgba(255, 255, 255, 0.4)
 }
 
 small {
@@ -549,9 +553,9 @@ small {
 nav {
     width: 230px;
     position: fixed;
-    top: 220px;
+    top: 240px;
     left: 50%;
-    margin-left: -580px;
+    margin-left: -550px;
     text-align: right
 }
 
@@ -737,6 +741,11 @@ footer {
         bottom: auto;
         width: auto
     }
+}
+
+#nav-ul {
+    margin: 20px;
+    margin-right: 30px;
 }
 
 /* input{
