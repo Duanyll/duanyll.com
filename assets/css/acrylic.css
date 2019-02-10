@@ -27,11 +27,11 @@ html, .acrylic:before {
     top: 0;
     right: 0;
     left: 0;
-    filter: blur(32px);
-    -webkit-filter: blur(32px);
-    -moz-filter: blur(32px);
-    -o-filter: blur(32px);
-    -ms-filter: blur(32px);
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
     background-blend-mode: exclusion;
 }
 
@@ -58,11 +58,16 @@ html, .acrylic:before {
     opacity: 0.60;
 }
 
+.yellow::after {
+    background-color: #fc0;
+    opacity: 0.60;
+}
+
 .child::after {
     background-color: rgba(230, 240, 255, 0.30);
     opacity: 0.60;
 }
 
 .shadow {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 1px 32px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 1px 6px rgba(0, 0, 0, 0.4);
 }
