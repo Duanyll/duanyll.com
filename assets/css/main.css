@@ -449,7 +449,7 @@ header {
 .header-shortcuts ul {
     display: block;
     padding-left: 0px;
-    margin-block-end: 5px;
+    margin-bottom: 5px;
 }
 
 .header-shortcuts li {
