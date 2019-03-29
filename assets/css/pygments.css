@@ -1,4 +1,5 @@
 pre .hll { background-color: #ffffcc }
+pre  { background: #f0f0f0; }
 pre .c { color: #60a0b0; font-style: italic } /* Comment */
 pre .err { border: 1px solid #FF0000 } /* Error */
 pre .k { color: #007020; font-weight: bold } /* Keyword */
