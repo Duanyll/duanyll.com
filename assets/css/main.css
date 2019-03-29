@@ -97,7 +97,7 @@ p, pre {
 
 pre, code, kbd, samp {
     font-family: 'monaco', 'courier new', monospace;
-	tab-size: 4
+	tab-size: 4;
     font-size: 1em
 }
 
