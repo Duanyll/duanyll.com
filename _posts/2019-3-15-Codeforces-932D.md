@@ -1,7 +1,8 @@
 ---
 title: CF932D Tree
-tags: [OI,题解,倍增]
+tags: [OI,题解,LCA]
 author: duanyll
+source: https://www.luogu.org/problemnew/show/CF932D
 ---
 
 ## 题意

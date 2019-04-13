@@ -96,8 +96,8 @@ p, pre {
 }
 
 pre, code, kbd, samp {
-    font-family: 'monaco', 'courier new', monospace;
-	tab-size: 4;
+    font-family: 'Fira Code', 'courier new', monospace;
+    tab-size: 4;
     font-size: 1em
 }
 
@@ -268,6 +268,14 @@ table {
     src: url("../fonts/copse-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/copse-regular-webfont.woff") format("woff"), url("../fonts/copse-regular-webfont.ttf") format("truetype"), url("../fonts/copse-regular-webfont.svg#CopseRegular") format("svg");
     font-weight: normal;
     font-style: normal
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('../fonts/FiraCode-Regular.eot');
+    src: url('../fonts/FiraCode-Regular.eot') format('embedded-opentype'), url('../fonts/FiraCode-Regular.woff2') format('woff2'), url('../fonts/FiraCode-Regular.woff') format('woff'), url('../fonts/FiraCode-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
@@ -517,8 +525,8 @@ header p {
     background-color: rgba(255, 255, 255, 0.6);
     padding: 10px 12px;
     margin-top: 6px;
-    line-height: 14px;
-    font-size: 14px;
+    line-height: 12px;
+    font-size: 12px;
     text-align: right;
     font-weight: bold;
     display: inline-block;

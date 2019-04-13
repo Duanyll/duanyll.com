@@ -1,7 +1,8 @@
 ---
 title: CF95B Lucky Numbers [毒瘤分类讨论贪心/DFS]
-tags: [OI,题解]
+tags: [OI,题解,贪心,思维题]
 author: duanyll
+source: https://www.luogu.org/problemnew/show/CF95B
 ---
 
 其实代码用不着这么多goto，不过写着方便~

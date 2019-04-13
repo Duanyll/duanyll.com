@@ -2,6 +2,7 @@
 title: CF786A Berzerk
 author: duanyll
 tags: [OI,题解,博弈论]
+source: https://www.luogu.org/problemnew/show/CF786A
 ---
 
 > 切着切着搜索水题就做到它了。鉴于我还没有正式的学过博弈论，就写篇题解纪念一下吧。

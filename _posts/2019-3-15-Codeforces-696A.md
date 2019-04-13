@@ -2,6 +2,7 @@
 title: CF696A Lorenzo Von Matterhorn
 tags: [OI,题解,思维题]
 author: duanyll
+source: https://www.luogu.org/problemnew/show/CF696A
 ---
 
 > 我打赌这道题如果`n=1e5`，绝对八成的人都会打树剖

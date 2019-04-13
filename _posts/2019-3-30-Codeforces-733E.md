@@ -1,7 +1,8 @@
 ---
 title: CF733E Sleep in Class [思维题]
-tags: [OI,题解]
+tags: [OI,题解,思维题]
 author: duanyll
+source: https://www.luogu.org/problemnew/show/CF733E
 ---
 
 ## 题意
