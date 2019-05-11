@@ -1,0 +1,23 @@
+---
+layout: null
+permalink: /posts.xml
+---
+
+<site>
+    <posts>
+	{%- for post in site.posts -%}
+		<post>
+			<title>{{ post.title }}</title>
+			<date>{{ post.date | date_to_long_string }}</date>
+			<author>{{ post.author }}</author>
+			<tags>
+			{%- for tag in post.tags -%}
+				<tag>{{ tag }}</tag>
+			{%- endfor -%}
+			</tags>
+			<url>{{ post.url }}</url>
+			<excerpt>{{ post.excerpt | strip_html | strip_newlines | truncate:100 | escape_once }}</excerpt>
+        </post>
+    {%- endfor -%}
+	</posts>
+</site>
