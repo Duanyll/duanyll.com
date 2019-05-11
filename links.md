@@ -33,4 +33,8 @@ cyl大佬的博客(目前咕了).
 
 harrybh大佬的博客.
 
+## 收藏夹
+
+- [LaTeX公式符号表](http://www.mohu.org/info/symbols/symbols.htm)
+
 欢迎交换友链,请到[Issues](https://github.com/duanyll/duanyll.github.io/issues).
