@@ -111,7 +111,7 @@
 
 </body>
 <script>
-  document.onload(() => {
+  document.onload = () => {
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [["$", "$"]],
@@ -120,7 +120,7 @@
       }
     });
     MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-  })
+  };
 </script>
 
 </html>
