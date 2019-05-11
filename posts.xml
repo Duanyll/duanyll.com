@@ -7,16 +7,16 @@ permalink: /posts.xml
     <posts>
 	{%- for post in site.posts -%}
 		<post>
-			<title>{{ post.title | escape_once }}</title>
-			<date>{{ post.date | date_to_long_string | escape_once }}</date>
-			<author>{{ post.author | escape_once }}</author>
+			<title>{{ post.title | escape }}</title>
+			<date>{{ post.date | date_to_long_string | escape }}</date>
+			<author>{{ post.author | escape }}</author>
 			<tags>
 			{%- for tag in post.tags -%}
-				<tag>{{ tag | escape_once }}</tag>
+				<tag>{{ tag | escape }}</tag>
 			{%- endfor -%}
 			</tags>
 			<url>{{ post.url }}</url>
-			<excerpt>{{ post.excerpt | strip_html | strip_newlines | truncate:100 | escape_once }}</excerpt>
+			<excerpt>{{ post.excerpt | strip_html | strip_newlines | truncate:100 | escape }}</excerpt>
         </post>
     {%- endfor -%}
 	</posts>
