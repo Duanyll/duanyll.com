@@ -20,8 +20,16 @@
   <script src="https://code.jquery.com/jquery-3.3.0.min.js"></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/navloader.js"></script>
-  <script id="mathjax-js" type="text/javascript" defer
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a']
+    }
+});
+MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+</script>
 
   <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
@@ -110,17 +118,7 @@
 
 
 </body>
-<script>
-  document.onload = () => {
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [["$", "$"]],
-        displayMath: [["$$", "$$"]],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a']
-      }
-    });
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-  };
-</script>
+
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 </html>
