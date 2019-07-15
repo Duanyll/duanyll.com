@@ -1,3 +1,5 @@
+// @ts-check
+
 //This file is licensed under the MIT license.
 
 //保存一个json文件访问的URL作为一个变量
