@@ -20,7 +20,7 @@ source: https://www.luogu.org/problemnew/show/CF870F
 - $gcd(a,b)\neq1$: 直接连边
 - $gcd(a,b)=1$: 设$f_a,f_b$是$a,b$的最小质因子
   - $f_af_b\leq n$: 可以走$a\rightarrow f_af_b \rightarrow b$, 路径长度为$2$
-  - $f_af_b>n$: 不妨设$f_a>f_b$, 那么有$f_a>\sqrt{n}$, 又有$a<n$, 故$a$一定是质数, 可以考虑存在一条这样的路径: $a\rarr2a\rarr2f_b\rightarrow b$, 路径长度为$3$, 并且当$2a>n$时, 不存在这样的路径.
+  - $f_af_b>n$: 不妨设$f_a>f_b$, 那么有$f_a>\sqrt{n}$, 又有$a<n$, 故$a$一定是质数, 可以考虑存在一条这样的路径: $a\rightarrow2a\rightarrow2f_b\rightarrow b$, 路径长度为$3$, 并且当$2a>n$时, 不存在这样的路径.
   
 若以$2$作为跳板来转移已经无解了, 用比$2$更大的数来转移也不会有解, 因此路径只有以上三种情况.
 
@@ -28,7 +28,7 @@ source: https://www.luogu.org/problemnew/show/CF870F
 
 - $a\rightarrow b$: 利用欧拉$\varphi$函数来线性统计.
 - $a\rightarrow f_af_b\rightarrow b$: 不好直接做, 用总情况数来减.
-- $a\rarr2a\rarr2f_b\rightarrow b$: 还是令$f_a>f_b$, 若这样的路径存在, 需满足以下条件:
+- $a\rightarrow2a\rightarrow2f_b\rightarrow b$: 还是令$f_a>f_b$, 若这样的路径存在, 需满足以下条件:
 $$
 2f_b\leq n, f_af_b>n
 $$

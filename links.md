@@ -6,7 +6,7 @@ layout: default
 
 # 友链
 
-## [llf0703.com](https://llf0703.com)
+## [llf0703.com](http://47.103.106.225/)
 
 llf大佬的博客.
 
