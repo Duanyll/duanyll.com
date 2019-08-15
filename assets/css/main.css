@@ -604,7 +604,7 @@ small {
     font-size: 12px
 }
 
-nav {
+#sidebar {
     width: 230px;
     position: fixed;
     top: 200px;
@@ -685,7 +685,7 @@ footer {
         width: auto;
         margin: 0
     }
-    nav {
+    #sidebar {
         display: none
     }
     header, section, footer {
@@ -748,7 +748,7 @@ footer {
     }
     #banner .fork {
         float: left;
-        display: inline-block;
+        display: block;
         margin-left: 0px;
         position: fixed;
         left: 20px
@@ -820,7 +820,7 @@ footer {
 }
 
 @media print, screen and (max-height: 480px) {
-    nav {
+    #sidebar {
         display: none
     }
     footer {
