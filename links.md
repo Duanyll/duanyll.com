@@ -25,13 +25,13 @@ cyc大佬的博客.
 
 一个毫无Bug,绝对与Galaxy OJ毫无关系的OJ.
 
-## [LinkToLune](https://linktolune.github.io/)
-
-cyl大佬的博客(目前咕了).
-
 ## [Harrybh](https://harrybh.github.io/)
 
 harrybh大佬的博客.
+
+## [yijan](https://www.cnblogs.com/yijan)
+
+orz yyh
 
 ## 收藏夹
 
