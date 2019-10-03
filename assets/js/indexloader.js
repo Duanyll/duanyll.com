@@ -3,7 +3,7 @@
 //This file is licensed under the MIT license.
 
 //保存一个json文件访问的URL作为一个变量
-let requestURL = '/posts.json';
+let requestURL = '/posts.xml';
 //创建一个HTTP请求对象
 let request = new XMLHttpRequest();
 //使用open（）打开一个新请求
@@ -20,9 +20,27 @@ let section = null;
 //处理来自服务器的数据
 request.onload = function () {
 	let postsText = request.response;
-	posts = JSON.parse(postsText);
+	posts = (new DOMParser()).parseFromString(postsText, 'application/xml');
 	//console.log(postsText);
-	initPosts(posts['posts']);
+	let list = [];
+	let doc = posts.getElementsByTagName('post');
+	for (let i = 0; i < doc.length; i++) {
+		const postdoc = doc.item(i);
+		let post = {};
+		post['title'] = postdoc.getElementsByTagName('title').item(0).innerHTML;
+		post['date'] = postdoc.getElementsByTagName('date').item(0).innerHTML;
+		post['author'] = postdoc.getElementsByTagName('author').item(0).innerHTML;
+		post['url'] = postdoc.getElementsByTagName('url').item(0).innerHTML;
+		post['excerpt'] = postdoc.getElementsByTagName('excerpt').item(0).innerHTML.trim();
+		post['tags'] = [];
+		let tags = postdoc.getElementsByTagName('tag');
+		for (let j = 0; j < tags.length; j++) {
+			const tag = tags.item(j);
+			post['tags'].push(tag.innerHTML);
+		}
+		list.push(post);
+	}
+	initPosts(list);
 };
 
 var nextToShow = 0;
