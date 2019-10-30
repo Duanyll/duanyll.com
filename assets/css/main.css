@@ -370,12 +370,13 @@ code {
 }
 
 pre {
-    padding: 8px 15px;
+    padding: 8px 15px 8px 30px;
     background: #efefef;
-    border-radius: 3px;
-    border: 1px solid #e4cccc;
     overflow: auto;
-    overflow-y: hidden
+    overflow-y: hidden;
+    left: -30px;
+    position: relative;
+    width: calc(100% + 15px)
 }
 
 pre code {
