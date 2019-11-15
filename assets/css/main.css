@@ -681,6 +681,26 @@ footer {
     text-shadow: 0px 1px 1px#333;
 }
 
+@media print {
+    #gitment-comments {
+        display: none;
+    }
+    section {
+        box-shadow: none;
+    }
+    header {
+        display: none;
+    }
+    footer {
+        text-shadow: none;
+    }
+    body {
+        background: none;
+        padding: 0.4in;
+        font-size: 12pt;
+    }
+}
+
 @media print, screen and (max-width: 1060px) {
     div.wrapper {
         width: auto;
@@ -798,14 +818,6 @@ footer {
     }
     header ul {
         display: none
-    }
-}
-
-@media print {
-    body {
-        padding: 0.4in;
-        font-size: 12pt;
-        color: #444
     }
 }
 
