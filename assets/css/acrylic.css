@@ -5,7 +5,7 @@ will produce much more intence effect on
 the filter blend */
 
 html, .acrylic:before {
-    background: #333 url(https://api.xygeng.cn/bing/1920.php) 50% 100% fixed;
+    background: #333 url(https://api.berryapi.net/?service=App.Bing.Images) 50% 100% fixed;
     background-size: cover;
 }
 
