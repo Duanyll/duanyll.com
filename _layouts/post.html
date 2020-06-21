@@ -17,6 +17,15 @@
   <link rel="stylesheet" href="/assets/css/pygments.css">
   <link rel="stylesheet" href="/assets/css/post.css">
   <link rel="stylesheet" href="/assets/css/acrylic.css">
+  {% if page.background-image %}
+  <style>
+    html,
+    .acrylic:before {
+      background: #333 url({{ page.background-image }}) 50% 100% fixed;
+      background-size: cover;
+    }
+  </style>
+  {% endif %}
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/navloader.js"></script>
