@@ -17,15 +17,7 @@
   <link rel="stylesheet" href="/assets/css/pygments.css">
   <link rel="stylesheet" href="/assets/css/post.css">
   <link rel="stylesheet" href="/assets/css/acrylic.css">
-  {% if page.background-image %}
-  <style>
-    html,
-    .acrylic:before {
-      background: #333 url({{ page.background-image }}) 50% 100% fixed;
-      background-size: cover;
-    }
-  </style>
-  {% endif %}
+  
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/navloader.js"></script>
@@ -40,12 +32,6 @@ MathJax.Hub.Config({
 MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 </script>
 
-  <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
-    <![endif]-->
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 </head>
 
 <body>
@@ -88,22 +74,11 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
       <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
-      <div id="gitment-comments"></div>
-      <script>
-        const gitment = new Gitment({
-            id: '{{ page.id }}', // optional
-            owner: 'Duanyll',
-            repo: 'duanyll.com-comment-section',
-            oauth: {
-              client_id: '24450f783f64414db772',
-              client_secret: '289c778c18c8411187dee8331913b56f6aa2d386',
-            },
-            // ...
-            // For more available options, check out the documentation below
-          })
-
-          gitment.render("gitment-comments")
-      </script>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="Duanyll/duanyll.com-comment" issue-term="pathname"
+          label="utterances commet" theme="github-light" crossorigin="anonymous" async>
+          </script>
+      </div>
     </section>
     <footer>
       <p>
