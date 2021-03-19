@@ -1,5 +1,7 @@
 {
     "markdown.styles": [
         ".vscode/retro.css"
-    ]
+    ],
+    "editor.fontFamily": "'Sarasa Mono SC'",
+    "editor.fontSize": 22
 }
