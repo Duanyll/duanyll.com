@@ -2,6 +2,11 @@
     "markdown.styles": [
         ".vscode/retro.css"
     ],
-    "editor.fontFamily": "'Sarasa Mono SC'",
-    "editor.fontSize": 22
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": false,
+        "editor.fontFamily": "'Sarasa Mono SC'",
+        "editor.fontSize": 22
+    },
+    "terminal.integrated.fontFamily": "Cascadia Code PL"
 }
