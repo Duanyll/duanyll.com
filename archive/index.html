@@ -1,0 +1,35 @@
+---
+layout: nonav
+title: 归档
+---
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+<p class="author">
+    <span class="date">{{ post.date | date_to_long_string | escape }}</span>
+</p>
+<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+{% endfor %}
+
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+    {% if paginator.previous_page %}
+    <button class="back" onclick="window.location.href = '{{ paginator.previous_page_path | relative_url }}'">Prev</button>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+    <em>{{ page }}</em>
+    {% elsif page == 1 %}
+    <button class="site" onclick="window.location.href = '/archive'">{{ page }}</button>
+    {% else %}
+    <button class="site" onclick="window.location.href = '{{ site.paginate_path | relative_url | replace: ':num', page }}'">{{ page }}</button>
+    {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+    <button onclick="window.location.href = '{{ paginator.next_page_path | relative_url }}'">Next</button>
+    {% endif %}
+</div>
+{% endif %}

@@ -3,3 +3,6 @@ lang: zh-cn
 title: Duanyll.com
 plugins:
   - jekyll-sitemap
+
+paginate: 20
+paginate_path: "archive/page:num"
