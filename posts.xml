@@ -16,7 +16,7 @@ permalink: /posts.xml
 			{%- endfor -%}
 			</tags>
 			<url>{{ post.url }}</url>
-			<excerpt>{{ post.excerpt | strip_html | strip_newlines | truncate:300 | escape }}</excerpt>
+			<excerpt>{{ post.excerpt | strip_html | truncate:200 | escape }}</excerpt>
         </post>
     {%- endfor -%}
 	</posts>
