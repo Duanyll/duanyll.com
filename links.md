@@ -6,12 +6,9 @@ layout: default
 
 # 友链
 
-## [llf0703.com](http://47.103.106.225/)
+## [rinfly.com](rinfly.com)
 
 llf大佬的博客.
-
-- [llf大佬的早期博客](https://2018.llf0703.com)
-- [llf大佬的项目](https://pro.llf0703.com)
 
 ## [CasterSoft](http://castersoft.com)
 
