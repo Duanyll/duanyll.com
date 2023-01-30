@@ -4,9 +4,12 @@
     ],
     "[markdown]": {
         "editor.wordWrap": "on",
-        "editor.quickSuggestions": false,
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
         "editor.fontFamily": "'Sarasa Mono SC'",
         "editor.fontSize": 22
     },
-    "terminal.integrated.fontFamily": "Cascadia Code PL"
 }
